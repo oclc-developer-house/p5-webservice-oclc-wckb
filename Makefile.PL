@@ -9,6 +9,11 @@ perl_version '5.008';
 name 'WebService-OCLC-WCKB';
 all_from 'lib/WebService/OCLC/WCKB.pm';
 
+requires 'Moo';
+requires 'HTTP::Tiny';
+requires 'URI';
+requires 'JSON';
+
 test_requires 'Test::More' => '0.96';
 
 WriteAll;
