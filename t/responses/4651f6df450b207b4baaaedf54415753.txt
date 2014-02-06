@@ -1,0 +1,16 @@
+{
+          'headers' => {
+                         'server' => 'Apache-Coyote/1.1',
+                         'connection' => 'close',
+                         'date' => 'Thu, 06 Feb 2014 21:23:39 GMT',
+                         'content-type' => 'text/plain;charset=utf8',
+                         'content-length' => '86'
+                       },
+          'content' => 'AuthzResult[status=WSKEY_INVALID,message=wskey status is UNAUTHENTICATED,source=wskey]',
+          'status' => '401',
+          'protocol' => 'HTTP/1.1',
+          'success' => '',
+          'url' => bless( do{\(my $o = 'http://worldcat.org/webservices/kb/rest/settings?alt=json&institution_id=123456&wskey=badkey')}, 'URI::http' ),
+          'reason' => 'Unauthorized'
+        };
+
