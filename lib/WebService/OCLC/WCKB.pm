@@ -16,7 +16,27 @@ has institution_id => ( is => 'rw', required => 1 );
 
 sub get_settings {
     my $self = shift;
-    return WebService::OCLC::WCKB::Settings->new( %$self )->get();
+    return WebService::OCLC::WCKB::Settings->new( %$self )->get()->entries->[ 0 ];
+}
+
+sub search_providers {
+    my $self = shift;
+    my $args = shift;
+
+    return WebService::OCLC::WCKB::Providers->new( %$self )->search( $args );
+}
+
+sub get_provider {
+    my $self = shift;
+    my $uid  = shift;
+
+    return WebService::OCLC::WCKB::Providers->new( %$self )->search( { provider_uid => $uid } )->entries->[ 0 ];
+}
+
+sub get_all_providers {
+    my $self = shift;
+
+    return WebService::OCLC::WCKB::Providers->new( %$self )->get();
 }
 
 1;
