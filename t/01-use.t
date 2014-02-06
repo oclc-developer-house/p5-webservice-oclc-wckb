@@ -11,4 +11,3 @@ BEGIN {
     use_ok( 'WebService::OCLC::WCKB::Providers' );
     use_ok( 'WebService::OCLC::WCKB::Entries' );
 }
-
