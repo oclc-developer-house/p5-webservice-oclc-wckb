@@ -4,7 +4,7 @@ if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/WebService/OCLC/WCKB.pm > README' );
 }
 
-perl_version '5.008';
+perl_version '5.008001';
 
 name 'WebService-OCLC-WCKB';
 all_from 'lib/WebService/OCLC/WCKB.pm';
