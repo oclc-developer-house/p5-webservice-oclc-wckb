@@ -8,11 +8,12 @@ use Test::More tests => 7;
 
 use_ok( 'WebService::OCLC::WCKB::Settings' );
 
-my $s_api = WebService::OCLC::WCKB::Settings->new( { institution_id => 123456, wskey => 'badkey' } );
+my $s_api = WebService::OCLC::WCKB::Settings->new(
+    { institution_id => 123456, wskey => 'badkey' } );
 
 isa_ok( $s_api, 'WebService::OCLC::WCKB::Settings' );
-is( $s_api->institution_id, 123456, 'institution_id' );
-is( $s_api->wskey, 'badkey', 'wskey' );
+is( $s_api->institution_id, 123456,   'institution_id' );
+is( $s_api->wskey,          'badkey', 'wskey' );
 
 $s_api->agent( MockAgent->new );
 
