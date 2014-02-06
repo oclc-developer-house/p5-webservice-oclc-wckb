@@ -17,4 +17,6 @@ requires 'JSON';
 test_requires 'Test::More' => '0.96';
 test_requires 'Digest::MD5';
 
+extra_tests;
+
 WriteAll;
