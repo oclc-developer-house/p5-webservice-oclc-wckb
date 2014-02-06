@@ -49,11 +49,19 @@ __END__
 
 WebService::OCLC::WCKB::Client - HTTP client class
 
-=head1 SYNOPSIS
-
 =head1 DESCRIPTION
 
+This class is a role which should not be instanciated directly. It provides 
+a set of methods to do the HTTP interaction with the KB API and return an 
+appropriate L<WebService::OCLC::WCKB::Response> object.
+
 =head1 METHODS
+
+=head2 get( $params )
+
+=head2 search( $params )
+
+This method is just an alias for C<get>.
 
 =head1 SEE ALSO
 

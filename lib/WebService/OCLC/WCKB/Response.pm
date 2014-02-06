@@ -50,7 +50,25 @@ WebService::OCLC::WCKB::Response - Wrapper around an HTTP response from the Know
 
 =head1 DESCRIPTION
 
+=head1 ATTRIBUTES
+
+=over 4
+
+=item * content
+
+=item * entries
+
+=item * pager
+
+=item * response
+
+=back
+
 =head1 METHODS
+
+=head2 BUILD
+
+=head2 BUILDARGS
 
 =head1 SEE ALSO
 

@@ -106,6 +106,28 @@ WebService::OCLC::WCKB - Library to access the OCLC WorldCat Knowledge Base API
 
 =head1 METHODS
 
+=head2 get_all_collections
+
+=head2 get_all_providers
+
+=head2 get_collection
+
+=head2 get_collections_by_provider
+
+=head2 get_entries_by_collection
+
+=head2 get_entries_by_provider
+
+=head2 get_provider
+
+=head2 get_settings
+
+=head2 search_collections
+
+=head2 search_entries
+
+=head2 search_providers
+
 =head1 SEE ALSO
 
 =over 4
