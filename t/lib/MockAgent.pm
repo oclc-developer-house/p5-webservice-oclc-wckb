@@ -12,7 +12,7 @@ sub get {
     my $url  = shift;
 
     # This works because the query string is set by an array instead of a hash
-    my $file = Digest::MD5::md5_hex( $url );
+    my $file = Digest::MD5::md5_hex( "$url" );
     open( my $fh, '<', "t/responses/$file.txt" );
     my $content = do { local $/; <$fh> };
     close( $fh );
