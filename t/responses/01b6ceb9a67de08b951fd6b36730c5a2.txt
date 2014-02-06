@@ -1,0 +1,58 @@
+{
+          'headers' => {
+                         'content-type' => 'application/json',
+                         'date' => 'Thu, 06 Feb 2014 20:35:54 GMT',
+                         'transfer-encoding' => 'chunked',
+                         'server' => 'Apache-Coyote/1.1',
+                         'connection' => 'close'
+                       },
+          'content' => '{
+    "title": "WorldCat KnowledgeBase Search: ",
+    "updated": "2014-02-06T20:35:54.491Z",
+    "id": "urn:uuid:5e5f48091e1ee36fd3efcc150fcc8b17",
+    "author": "OCLC",
+    "links": [    {
+        "href": "http://worldcat.org/webservices/kb/rest/settings?search-type=search&scope=my&startIndex=1&orderBy=title+asc&institution_id=123456&itemsPerPage=10",
+        "rel": "self"
+    }],
+    "os:totalResults": "1",
+    "os:startIndex": "1",
+    "os:itemsPerPage": "10",
+    "os:Query": "search-type=search&scope=my&startIndex=1&orderBy=title+asc&institution_id=123456&itemsPerPage=10",
+    "entries": [    {
+        "title": "University of OCLC Test",
+        "id": "http://worldcat.org/webservices/kb/rest/settings/123456",
+        "links":         [
+                        {
+                "href": "http://worldcat.org/webservices/kb/rest/settings/123456",
+                "rel": "self"
+            },
+                        {
+                "href": "http://worldcat.org/webservices/kb/rest/settings/123456.html",
+                "rel": "alternate"
+            }
+        ],
+        "kb:institution_name": "University of OCLC Test",
+        "kb:institution_id": "123456",
+        "kb:download_ip": "123.45.67.89",
+        "kb:preferred_oclc_symbol": "TRN",
+        "kb:google_scholar_enabled": "false",
+        "kb:wcsync_enabled": "false",
+        "kb:marcdelivery_enabled": "false",
+        "kb:marcdelivery_no_delete": "false",
+        "kb:eswitch_enabled": "true",
+        "kb:eswitch_eligible": "false",
+        "kb:article_filter_enabled": "false",
+        "kb:oclc_symbols": "TRN",
+        "kb:openaccess_in_resolver": "ebook proxy journal",
+        "kb:selected_collections": "16",
+        "kb:galesiteid": "oclc"
+    }]
+}',
+          'protocol' => 'HTTP/1.1',
+          'url' => bless( do{\(my $o = 'http://worldcat.org/webservices/kb/rest/settings?alt=json&institution_id=123456&wskey=decafbad')}, 'URI::http' ),
+          'status' => '200',
+          'success' => 1,
+          'reason' => 'OK'
+        };
+
