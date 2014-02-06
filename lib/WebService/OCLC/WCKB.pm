@@ -14,6 +14,8 @@ has wskey => ( is => 'rw', required => 1 );
 
 has institution_id => ( is => 'rw', required => 1 );
 
+has agent => ( is => 'rw', default => sub { HTTP::Tiny->new } );
+
 sub get_settings {
     my $self = shift;
     return WebService::OCLC::WCKB::Settings->new( %$self )->get()
