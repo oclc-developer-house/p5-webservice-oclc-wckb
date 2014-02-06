@@ -31,13 +31,13 @@ a convinence, 4 common attributes used by the HTTP client.
 
 =over 4 
 
-=item * wskey - your WSKEY access code
+=item * wskey - Your WSKEY access code
 
-=item * institution_id - (one of) the institution id associated with your WSKEY
+=item * institution_id - (one of) The institution id associated with your WSKEY
 
-=item * base_url - the base URL to the KB API
+=item * base_url - The base URL to the KB API
 
-=item * agent - an HTTP::Tiny agent
+=item * agent - An HTTP::Tiny agent
 
 =back
 

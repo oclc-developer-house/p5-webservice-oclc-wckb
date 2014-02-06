@@ -23,7 +23,7 @@ WebService::OCLC::WCKB::Entries - Entries endpoint to the Knowledge Base API
 
 =over 4
 
-=item * endpoint - specifies the 'entries' endpoint name
+=item * endpoint - Specifies the 'entries' endpoint name
 
 =back
 

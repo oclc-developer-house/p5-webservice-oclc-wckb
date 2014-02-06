@@ -23,7 +23,7 @@ WebService::OCLC::WCKB::Providers - Providers endpoint to the Knowledge Base API
 
 =over 4
 
-=item * endpoint - specifies the 'providers' endpoint name
+=item * endpoint - Specifies the 'providers' endpoint name
 
 =back
 

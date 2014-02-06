@@ -59,6 +59,14 @@ appropriate L<WebService::OCLC::WCKB::Response> object.
 
 =head2 get( $params )
 
+This method issues the C<GET> request against the API given the endpoint 
+specified in the class that used this role. All extra parameters are added 
+to the query string. Visit the specific endpoint api documentation for details 
+on what parameters are available.
+
+The code will C<die()> if the request does not return successfully, otherwise a 
+L<WebService::OCLC::WCKB::Response> object is returned.
+
 =head2 search( $params )
 
 This method is just an alias for C<get>.

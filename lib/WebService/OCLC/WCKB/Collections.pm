@@ -23,7 +23,7 @@ WebService::OCLC::WCKB::Collections - Collections endpoint to the Knowledge Base
 
 =over 4
 
-=item * endpoint - specifies the 'collections' endpoint name
+=item * endpoint - Specifies the 'collections' endpoint name
 
 =back
 

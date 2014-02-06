@@ -48,19 +48,24 @@ WebService::OCLC::WCKB::Response - Wrapper around an HTTP response from the Know
 
 =head1 SYNOPSIS
 
+    WebService::OCLC::WCKB::Response->new( $response );
+
 =head1 DESCRIPTION
+
+This class is used by the L<WebService::OCLC::WCKB::Client> class to handle 
+the response data from L<HTTP::Tiny>.
 
 =head1 ATTRIBUTES
 
 =over 4
 
-=item * content
+=item * response - An HTTP response from L<HTTP::Tiny>
 
-=item * entries
+=item * content - The deserialized JSON response
 
-=item * pager
+=item * entries - The entries portion of the JSON response
 
-=item * response
+=item * pager - A L<Data::Page> object created from the OpenSearch portion of the response
 
 =back
 
@@ -68,7 +73,13 @@ WebService::OCLC::WCKB::Response - Wrapper around an HTTP response from the Know
 
 =head2 BUILD
 
+An internal method allowing the class to be instanciated by only passing the 
+response object and not a hashref of arguments.
+
 =head2 BUILDARGS
+
+An internal method which hands the deserialization of the response body, 
+splitting off the entries portion and creating the L<Data::Page> object.
 
 =head1 SEE ALSO
 
