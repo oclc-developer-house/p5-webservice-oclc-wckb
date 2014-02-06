@@ -16,7 +16,8 @@ has institution_id => ( is => 'rw', required => 1 );
 
 sub get_settings {
     my $self = shift;
-    return WebService::OCLC::WCKB::Settings->new( %$self )->get()->entries->[ 0 ];
+    return WebService::OCLC::WCKB::Settings->new( %$self )->get()
+        ->entries->[ 0 ];
 }
 
 sub search_providers {
@@ -30,7 +31,8 @@ sub get_provider {
     my $self = shift;
     my $uid  = shift;
 
-    return WebService::OCLC::WCKB::Providers->new( %$self )->search( { provider_uid => $uid } )->entries->[ 0 ];
+    return WebService::OCLC::WCKB::Providers->new( %$self )
+        ->search( { provider_uid => $uid } )->entries->[ 0 ];
 }
 
 sub get_all_providers {
@@ -43,21 +45,24 @@ sub search_collections {
     my $self = shift;
     my $args = shift;
 
-    return WebService::OCLC::WCKB::Collections->new( %$self )->search( $args );
+    return WebService::OCLC::WCKB::Collections->new( %$self )
+        ->search( $args );
 }
 
 sub get_collection {
     my $self = shift;
     my $uid  = shift;
 
-    return WebService::OCLC::WCKB::Collections->new( %$self )->search( { collection_uid => $uid } )->entries->[ 0 ];
+    return WebService::OCLC::WCKB::Collections->new( %$self )
+        ->search( { collection_uid => $uid } )->entries->[ 0 ];
 }
 
 sub get_collections_by_provider {
     my $self = shift;
     my $uid  = shift;
 
-    return WebService::OCLC::WCKB::Collections->new( %$self )->search( { provider_uid => $uid } );
+    return WebService::OCLC::WCKB::Collections->new( %$self )
+        ->search( { provider_uid => $uid } );
 }
 
 sub get_all_collections {
@@ -77,14 +82,16 @@ sub get_entries_by_provider {
     my $self = shift;
     my $uid  = shift;
 
-    return WebService::OCLC::WCKB::Entries->new( %$self )->search( { provider_uid => $uid } );
+    return WebService::OCLC::WCKB::Entries->new( %$self )
+        ->search( { provider_uid => $uid } );
 }
 
 sub get_entries_by_collection {
     my $self = shift;
     my $uid  = shift;
 
-    return WebService::OCLC::WCKB::Entries->new( %$self )->search( { collection_uid => $uid } );
+    return WebService::OCLC::WCKB::Entries->new( %$self )
+        ->search( { collection_uid => $uid } );
 }
 
 1;

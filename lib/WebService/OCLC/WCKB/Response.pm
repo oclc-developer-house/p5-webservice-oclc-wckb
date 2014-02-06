@@ -17,7 +17,7 @@ has entries => ( is => 'rw' );
 sub BUILDARGS {
     my ( $class, @args ) = @_;
 
-    unshift @args, 'response' if @args == 1; 
+    unshift @args, 'response' if @args == 1;
 
     return { @args };
 }
@@ -32,7 +32,8 @@ sub BUILD {
 
     $pager->total_entries( $content->{ 'os:totalResults' } );
     $pager->entries_per_page( $content->{ 'os:itemsPerPage' } );
-    $pager->current_page( ( $content->{ 'os:startIndex' } - 1 ) / $content->{ 'os:itemsPerPage' } + 1 );
+    $pager->current_page( ( $content->{ 'os:startIndex' } - 1 )
+        / $content->{ 'os:itemsPerPage' } + 1 );
 
     $self->entries( $content->{ entries } );
 }
