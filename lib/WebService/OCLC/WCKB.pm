@@ -39,4 +39,52 @@ sub get_all_providers {
     return WebService::OCLC::WCKB::Providers->new( %$self )->get();
 }
 
+sub search_collections {
+    my $self = shift;
+    my $args = shift;
+
+    return WebService::OCLC::WCKB::Collections->new( %$self )->search( $args );
+}
+
+sub get_collection {
+    my $self = shift;
+    my $uid  = shift;
+
+    return WebService::OCLC::WCKB::Collections->new( %$self )->search( { collection_uid => $uid } )->entries->[ 0 ];
+}
+
+sub get_collections_by_provider {
+    my $self = shift;
+    my $uid  = shift;
+
+    return WebService::OCLC::WCKB::Collections->new( %$self )->search( { provider_uid => $uid } );
+}
+
+sub get_all_collections {
+    my $self = shift;
+
+    return WebService::OCLC::WCKB::Collections->new( %$self )->get();
+}
+
+sub search_entries {
+    my $self = shift;
+    my $args = shift;
+
+    return WebService::OCLC::WCKB::Entries->new( %$self )->search( $args );
+}
+
+sub get_entries_by_provider {
+    my $self = shift;
+    my $uid  = shift;
+
+    return WebService::OCLC::WCKB::Entries->new( %$self )->search( { provider_uid => $uid } );
+}
+
+sub get_entries_by_collection {
+    my $self = shift;
+    my $uid  = shift;
+
+    return WebService::OCLC::WCKB::Entries->new( %$self )->search( { collection_uid => $uid } );
+}
+
 1;
