@@ -19,7 +19,13 @@ WebService::OCLC::WCKB::Collections - Collections endpoint to the Knowledge Base
 
 =head1 DESCRIPTION
 
-=head1 METHODS
+=head1 ATTRIBUTES
+
+=over 4
+
+=item * endpoint - specifies the 'collections' endpoint name
+
+=back
 
 =head1 SEE ALSO
 

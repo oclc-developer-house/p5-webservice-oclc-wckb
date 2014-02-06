@@ -22,11 +22,24 @@ __END__
 
 WebService::OCLC::WCKB::ClientInfo - Common attributes for HTTP client usage
 
-=head1 SYNOPSIS
-
 =head1 DESCRIPTION
 
-=head1 METHODS
+This class is a role which should not be instanciated directly. It provides, as 
+a convinence, 4 common attributes used by the HTTP client.
+
+=head1 ATTRIBUTES
+
+=over 4 
+
+=item * wskey - your WSKEY access code
+
+=item * institution_id - (one of) the institution id associated with your WSKEY
+
+=item * base_url - the base URL to the KB API
+
+=item * agent - an HTTP::Tiny agent
+
+=back
 
 =head1 SEE ALSO
 

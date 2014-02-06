@@ -19,7 +19,13 @@ WebService::OCLC::WCKB::Entries - Entries endpoint to the Knowledge Base API
 
 =head1 DESCRIPTION
 
-=head1 METHODS
+=head1 ATTRIBUTES
+
+=over 4
+
+=item * endpoint - specifies the 'entries' endpoint name
+
+=back
 
 =head1 SEE ALSO
 
