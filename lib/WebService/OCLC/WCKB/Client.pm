@@ -14,7 +14,13 @@ use WebService::OCLC::WCKB::Response;
 sub get {
     my $self   = shift;
     my $params = shift || {};
-    my $uri    = URI->new( $self->base_url . $self->endpoint );
+
+    my $path = $self->endpoint;
+    if( defined $params->{ title } || defined $params->{ q } ) {
+        $path .= '/search';
+    }
+
+    my $uri = URI->new( $self->base_url . $path );
     $uri->query_form( $self->_gen_params( $params ) );
 
     my $res = $self->agent->get( $uri );
